@@ -8,21 +8,19 @@ The stock Asahi kernel can't output video over USB-C yet. Asahi's experimental [
 
 ## On Asahi
 
-1. Install Claude Code:
-   ```bash
-   curl -fsSL https://claude.ai/install.sh | bash
-   ```
-   If `claude` isn't found, open a new terminal. If it crashes on start (Asahi uses 16K memory pages), install the Node version instead: `sudo dnf install -y nodejs npm && sudo npm install -g @anthropic-ai/claude-code`.
-2. Clone this repo and start Claude Code in it. It reads `CLAUDE.md` automatically.
+1. Clone this repo and start Claude Code in it:
    ```bash
    git clone https://github.com/sys-skye/asahi-usbc-display-handoff ~/fairydust-work && cd ~/fairydust-work && claude
    ```
-3. Send: **Read CLAUDE.md and start Phase 1.**
-4. Keep a second terminal window open. Claude can't type your sudo password, so it hands you root commands to run there; paste the output back.
-5. After the reboot it asks for, pick the `-fairydust` entry in GRUB, then continue the same conversation:
+   Claude Code only loads `CLAUDE.md` automatically when started in `~/fairydust-work`, so always start it from there.
+2. Send: **Read CLAUDE.md and start Phase 1.**
+3. Keep a second terminal window open. Claude can't type your sudo password, so it hands you root commands to run there; paste the output back.
+4. After the reboot it asks for, pick the `-fairydust` entry in GRUB, then continue the same conversation:
    ```bash
    cd ~/fairydust-work && claude --continue
    ```
+
+Don't have Claude Code on Asahi yet? Install it first with `curl -fsSL https://claude.ai/install.sh | bash` (open a new terminal if `claude` isn't found). If it crashes on start (Asahi uses 16K memory pages), use the Node version instead: `sudo dnf install -y nodejs npm && sudo npm install -g @anthropic-ai/claude-code`.
 
 ## Which port
 
