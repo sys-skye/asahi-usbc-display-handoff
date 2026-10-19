@@ -1,0 +1,6 @@
+# Created while working through CLAUDE.md on Asahi; machine-specific, never commit
+asahi-fairydust-display/
+boot.bin*
+preflight.txt
+*.log
+restore-fairydust-dtbs.sh
